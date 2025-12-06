@@ -1,63 +1,47 @@
-# Recursion vs Iteration | C++ Comparative Study
+# Recursion vs Iteration – Fibonacci & Factorial
 
-## 📖 Problem Statement
-Compare recursive and non-recursive implementations of common algorithms such as:
-- **Factorial computation**
-- **Fibonacci sequence generation**
-
-Analyze:
-- **Time Complexity**
-- **Space Complexity**
-- **Performance trade-offs**
-- **Real-world scenarios** where recursion vs iteration matters
-
-This project includes a C++ program demonstrating execution-time differences and theoretical analysis for both recursive & iterative solutions.
+## Problem Statement
+Compare recursive and non-recursive implementations of Fibonacci and factorial. Analyze time and space complexities and discuss the trade-offs in different contexts. Include real-time scenarios where this comparison is applicable.
 
 ---
 
-## 🚀 Features
-- Factorial (Recursive & Iterative)
-- Fibonacci (Recursive & Iterative)
-- Performance comparison using high-resolution timestamps
-- Menu-driven CLI program
-- Well-documented code with explanations
+## Algorithms Implemented
+
+### Factorial
+| Method | Time Complexity | Space Complexity |
+|--------|----------------|-----------------|
+| Recursive | O(n) | O(n) |
+| Iterative | O(n) | O(1) |
+
+### Fibonacci
+| Method | Time Complexity | Space Complexity |
+|--------|----------------|-----------------|
+| Recursive | O(2^n) | O(n) |
+| Iterative | O(n) | O(1) |
 
 ---
 
-## 📂 File Included
-| File Name | Description |
-|----------|-------------|
-| `recursion_vs_iteration.cpp` | Contains the full comparison code with complexity analysis and examples |
-| `README.md` | Documentation |
-  
----
+## Trade-offs
 
-## 🧠 Theoretical Summary
-
-| Concept | Recursive Approach | Iterative Approach |
-|--------|------------------|------------------|
-| Readability | Simple, closer to math logic | Sometimes more complex |
-| Time Complexity | Can be worse (e.g., Fibonacci: O(2ⁿ)) | Usually optimal (e.g., O(n)) |
-| Space Complexity | Uses call stack → O(n) | O(1) |
-| Risk | Stack overflow for large n | Safe for large inputs |
-| Best Use Cases | Trees, Divide & Conquer, Backtracking | Loops, Performance-critical systems |
+| Recursion | Iteration |
+|----------|-----------|
+| Cleaner & closer to mathematical definitions | Faster and memory efficient |
+| Useful for tree/graph problems | No stack overflow risk |
+| Shorter code | Better for large inputs |
 
 ---
 
-## 🌍 Real-Life Applications
-| Application Area | Preferred Approach |
-|-----------------|------------------|
-| File System Traversal | Recursion |
-| Tree and graph algorithms (DFS) | Both |
-| Factorial in statistics & ML | Iteration |
-| Financial modelling with recurrence relations | Iteration |
-| Compiler and parsing systems | Recursion |
-| Competitive programming with high input limits | Iteration |
+## Real-Time Applications
+
+- Optimizing performance in embedded systems, servers, and critical applications
+- Graph/tree traversal algorithms (DFS recursion vs stack-based DFS)
+- Backtracking techniques vs iterative search
+- Interview and educational demonstrations
 
 ---
 
-## 🛠️ How to Compile & Run
+## How to Compile & Run
 
-```sh
-g++ recursion_vs_iteration.cpp -o compare
-./compare
+```bash
+g++ -std=c++17 main.cpp -o run
+./run
